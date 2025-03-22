@@ -22,7 +22,7 @@ jobs:
         run: flutter pub get
         
       - name: Build web
-        run: flutter build web --release -t "lib/app/entrypoints/main_prod.dart" --base-href ${GITHUB_REPOSITORY#*/}
+        run: flutter build web --release -t "lib/app/entrypoints/main_prod.dart" --base-href /${GITHUB_REPOSITORY#*/}/
         
       - name: Create deployment directory
         run: |
